@@ -13,6 +13,8 @@ int leftSpeedFWD = 0;
 int rightSpeedBWD = 0;
 int leftSpeedBWD = 0;
 
+bool movement[]={false,false,false};//fwd ~ bkwd
+
 int acelerationStep = 5;
 
 void setup() {
@@ -40,4 +42,6 @@ void loop() {
   acelerate(commandReceived);
 
   voltageCheck();
+
+//  buttonPressed();
 }
