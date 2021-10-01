@@ -51,10 +51,10 @@ void ledTest(int ledSequence) {
 }
 
 void buttonPressed(){
-//  if (!digitalRead(button)){
-//    btSerial.write("b4");
-//    Serial.println("botao pressionado");
-//  }
+  if (!digitalRead(button)){
+    btSerial.write("b4");
+    Serial.println("botao pressionado");
+  }
 }
 
 void ledSetup() {
