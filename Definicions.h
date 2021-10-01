@@ -1,7 +1,9 @@
 #define RX 2
 #define TX 3
 
-#define CONNECTIVITY 4
+#define CONNECTIVITY 13//5
+
+//#define INTERRUPTPIN 2
 
 #define RIGHTMOTOR_F 6
 #define RIGHTMOTOR_B 9
