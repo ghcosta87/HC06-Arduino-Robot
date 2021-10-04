@@ -7,11 +7,11 @@ void voltageCheck() {
   if (!resetTimeA)setTimer = millis();
   if (cronometroA(setTimer)) {
     if (DEBUG)Serial.println(" >>>>>>>>>>>> SENDING DATA NOW ! <<<<<<<<<<<<<");
-    if (currentVoltage < 4.6)btSerial.write("v0");
-    if (currentVoltage > 4.6 && currentVoltage < 4.7)btSerial.write("v1");
-    if (currentVoltage > 4.7 && currentVoltage < 4.8)btSerial.write("v2");
-    if (currentVoltage > 4.8 && currentVoltage < 4.9)btSerial.write("v3");
-    if (currentVoltage > 4.9)btSerial.write("v4");    
+    if (currentVoltage < 4.6)btSerial.write(BATT0);
+    if (currentVoltage > 4.6 && currentVoltage < 4.7)btSerial.write(BATT25);
+    if (currentVoltage > 4.7 && currentVoltage < 4.8)btSerial.write(BATT50);
+    if (currentVoltage > 4.8 && currentVoltage < 4.9)btSerial.write(BATT100);
+    if (currentVoltage > 4.9)btSerial.write(BATT100);    
   }
 }
 
