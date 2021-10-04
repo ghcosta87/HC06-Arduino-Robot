@@ -19,5 +19,13 @@
 #define LEFTSIDE 'L'
 #define RIGHTSIDE 'R'
 #define SIDENEUTRAL 'C'
+#define STOP 'S'
+#define STOPRELEASED 's'
+
+#define BATT0 "v0"
+#define BATT25 "v1"
+#define BATT50 "v2"
+#define BATT75 "v3"
+#define BATT100 "v4"
 
 #define DEBUG true
