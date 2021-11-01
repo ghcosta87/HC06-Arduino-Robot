@@ -1,15 +1,19 @@
 char commandReceived;
 char commandSent;
 
-float currentVoltage = 0;
-
 int rightSpeedFWD = 0;
 int leftSpeedFWD = 0;
 int rightSpeedBWD = 0;
 int leftSpeedBWD = 0;
 
 bool releaseBreakes = true;
-
-bool movement[] = {false, false, false}; //fwd ~ bkwd
+bool pathBlocked = false;
 
 int acelerationStep = 5;
+int deacelerationStep = 5;
+
+int currentDirection = 0;
+int lastDirection = 0;
+bool keepTurning = true;
+
+long setTimer;
