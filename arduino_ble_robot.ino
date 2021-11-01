@@ -1,24 +1,27 @@
 #include <SoftwareSerial.h>
+#include <NewPing.h>
+#include <Servo.h>
+
 #include "definitions.h"
 #include "globalVariables.h"
 
 SoftwareSerial btSerial(RX, TX);
+NewPing sonar(SONAR_TRIGGER, SONAR_ECHO, 200);
 
 void setup() {
-  // SETUP.ino
-  portsSetup();
+  portsSetup(); // SETUP.ino
 
-  // SETUP.ino
-  comSetup();
+  comSetup(); // SETUP.ino
 }
 
 void loop() {
-  //  bleSerialCom.ino
-  serialTalk();
+  serialTalk(); //  bleSerialCom.ino
 
-  //  carControl.ino
-  acelerate(commandReceived);
+  acelerate(commandReceived); //  carControl.ino
 
-  //  carAuxiliars.ino
-  voltageCheck();
+  voltageCheck(); //  carAuxiliars.ino
+
+  checkSonar(); //  carAuxiliars.ino
+  
+  sendData();
 }
